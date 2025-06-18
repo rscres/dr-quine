@@ -12,7 +12,6 @@ int main(int argc, char **argv) {
 		char name[10];
 		sprintf(name, "Sully_%d.c", i);
 		dprintf(open(name, O_RDWR | O_CREAT, S_IRWXU | S_IRWXO), CODE, 10, 9, i, 34, CODE);
-		printf("%d\n", i);
 		char buffer[100];
 		sprintf(buffer, "cc Sully_%d.c -o Sully_%d; ./Sully_%d", i, i, i);
 		system(buffer);
