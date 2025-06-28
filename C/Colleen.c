@@ -3,8 +3,8 @@
 //This is a comment
 
 void print() {
-	char *str = "#include <stdio.h>%c%c//This is a comment%c%cvoid print() {%c%cchar *str = %c%s%c;%c%cprintf(str, 10, 10, 10, 10, 10 , 9, 34, str, 34, 10, 9, 10, 10, 10 , 10, 9, 10, 9, 10, 9, 10, 10);%c}%c%cint main(void) {%c%c//This is another comment%c%cprint();%c%creturn (0);%c}%c";
-	printf(str, 10, 10, 10, 10, 10 , 9, 34, str, 34, 10, 9, 10, 10, 10 , 10, 9, 10, 9, 10, 9, 10, 10);
+	char *str = "#include <stdio.h>%1$c%1$c//This is a comment%1$c%1$cvoid print() {%1$c%2$cchar *str = %3$c%4$s%3$c;%1$c%2$cprintf(str, 10, 9, 34, str);%1$c}%1$c%cint main(void) {%1$c%2$c//This is another comment%1$c%2$cprint();%1$c%2$creturn (0);%1$c}%1$c";
+	printf(str, 10, 9, 34, str);
 }
 
 int main(void) {
